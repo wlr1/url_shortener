@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const Shortener = () => {
@@ -27,7 +27,9 @@ const Shortener = () => {
         setShortenedUrl("Error: Failed to shorten URL");
       }
     } catch (error) {
-      setShortenedUrl("Error: Failed to shorten URL" + " / " + error.message);
+      if (error instanceof ReferenceError) {
+        setShortenedUrl("Error: Failed to shorten URL" + " / " + error.message);
+      }
     }
   };
 
