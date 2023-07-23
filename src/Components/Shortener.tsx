@@ -5,8 +5,6 @@ const Shortener = () => {
   const [originalUrl, setOriginalUrl] = useState("");
   const [shortenedUrl, setShortenedUrl] = useState("");
 
-  // const API_TOKEN: string = "PZJsanffRLzN3YTd30VwRP2o1hO2PkfIhc16w0fRS3TRD";
-
   const shortenUrl = async () => {
     const corsAnywhere = "https://cors-anywhere.herokuapp.com/"; // CORS error solution
     const url = "https://cleanuri.com/api/v1/shorten"; // API endpoint
@@ -44,13 +42,13 @@ const Shortener = () => {
             <div className="flex items-center mt-16">
               <input
                 type="text"
-                className="h-[56px] w-[444px] p-5"
+                className="h-[56px] 2xl:w-[444px] p-5 sm:w-[333px] "
                 placeholder="Enter the link here"
                 value={originalUrl}
                 onChange={(e) => setOriginalUrl(e.target.value)} // Update the state with the entered URL
               />
               <button
-                className="border-1 bg-neutral-800 w-[100px] h-[56px] hover:bg-neutral-700"
+                className="border-1 bg-neutral-800 w-[100px] h-[56px] hover:bg-neutral-700 sm:w-[50px] lg:w-[110px]"
                 onClick={shortenUrl} // Call the shortenUrl function when the button is clicked
               >
                 <span className="text-white">Short URL</span>
