@@ -1,4 +1,4 @@
-import Shortener from "./Components/Shortener.tsx";
+import Shortener from './Components/Shortener.tsx';
 
 const App = () => {
   return (
